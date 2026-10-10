@@ -1,0 +1,5 @@
+# Prevent direct HTTP access to user credentials and sensitive flat files
+<FilesMatch "^(users|leads|requests|lockouts|setup|auth-settings)\.json$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
